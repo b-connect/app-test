@@ -45,6 +45,7 @@ module.exports = function(config) {
       'bower_components/angular-masonry/angular-masonry.js',
       'bower_components/angular-masonry-directive/src/angular-masonry-directive.js',
       'bower_components/angular-cordova/src/angular-cordova.js',
+      'bower_components/ngCordova/dist/ng-cordova.js',
       'bower_components/angular-mocks/angular-mocks.js',
       // endbower
       'app/scripts/**/*.js',

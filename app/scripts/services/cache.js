@@ -16,7 +16,7 @@ angular.module('bcApp')
           date : new Date().getTime(),
           expire : (expire*100),
           data : data
-        }
+        };
       },
       clearCache : function(id) {
         if ( !id ) {
@@ -26,18 +26,20 @@ angular.module('bcApp')
         }
       },
       getCache : function(id) {
-        if ( !$localStorage[id] ) return false ;
-        else if ( $localStorage[id].expire == -1 ) {
+        if ( !$localStorage[id] ) {
+          return false ;
+        }
+        else if ( $localStorage[id].expire === -1 ) {
           return $localStorage[id] ;
         }
         else if ( $localStorage[id].date > (new Date().getTime() - $localStorage[id].expire ) ) {
-          console.log("Cached") ;
+          console.log('Cached') ;
           return $localStorage[id] ;
         } else {
           //console.log($localStorage[id].date + " < " + )
-          console.log("Expired") ;
+          console.log('Expired') ;
           return false ;
         }
       }
-    }
+    };
   });

@@ -11,5 +11,5 @@ angular.module('bcApp')
   .controller('NewsCtrl', function ($scope,Content) {
       Content.getContent(function(result){
         $scope.stories = result.list ;
-      })
+      });
   });
