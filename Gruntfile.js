@@ -18,7 +18,8 @@ module.exports = function (grunt) {
   // Configurable paths for the application
   var appConfig = {
     app: require('./bower.json').appPath || 'app',
-    dist: 'www'
+    dist: 'www',
+    phonegap: 'www'
   };
 
   // Define the configuration for all the tasks
@@ -141,11 +142,12 @@ module.exports = function (grunt) {
           dot: true,
           src: [
             '.tmp',
-            '<%= yeoman.dist %>/{,*/}*',
-            '!<%= yeoman.dist %>/.git{,*/}*'
+            '<%= yeoman.dist %>/*',
+            '!<%= yeoman.dist %>/.git*'
           ]
         }]
       },
+      phonegap: ['<%= yeoman.phonegap %>/*', '!<%= yeoman.phonegap %>/config.xml', '!<%= yeoman.phonegap %>/res'],
       server: '.tmp'
     },
 
