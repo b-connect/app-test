@@ -1,0 +1,11 @@
+<md-subheader>Online Friends</md-subheader>
+<md-icon md-svg-icon="alarm" alt="Alarm Icon"></md-icon>
+<div masonry='{ "transitionDuration" : "0.4s" , "itemSelector" : ".item-selector" , "gutter" : 20}'>
+  <article style="width : 32%; margin-bottom:20px" masonry-tile class="gray item-selector" ng-repeat="story in stories | limitTo : 6">
+    <image src="{{story.field_mainimage.file.url}}" style="max-width : 100%" />
+    <footer>
+      <h3 class="md-display-1">{{story.title}}</h3>
+    </footer>
+  </article>
+</div>
+</div>
